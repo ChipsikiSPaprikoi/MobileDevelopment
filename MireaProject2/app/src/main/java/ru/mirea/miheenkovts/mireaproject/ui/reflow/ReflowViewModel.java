@@ -10,7 +10,11 @@ public class ReflowViewModel extends ViewModel {
 
     public ReflowViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is reflow fragment");
+        mText.setValue("Worker задача");
+    }
+
+    public void setText(String text) {
+        mText.setValue(text);
     }
 
     public LiveData<String> getText() {

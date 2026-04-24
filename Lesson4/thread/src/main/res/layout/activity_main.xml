@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Информация о потоке"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editLessons"
+        android:layout_width="381dp"
+        android:layout_height="56dp"
+        android:hint="Общее количество пар"
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInfo" />
+
+    <EditText
+        android:id="@+id/editDays"
+        android:layout_width="380dp"
+        android:layout_height="56dp"
+        android:hint="Количество учебных дней"
+        android:inputType="number"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editLessons" />
+
+    <Button
+        android:id="@+id/buttonMirea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Посчитать среднее в день"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editDays" />
+
+    <TextView
+        android:id="@+id/textViewMirea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Результат: "
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonMirea" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

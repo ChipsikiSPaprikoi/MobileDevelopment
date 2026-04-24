@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF212121"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music Player"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp" />
+
+    <ImageView
+        android:id="@+id/playerIcon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@android:drawable/ic_media_play"
+        android:background="#FF424242"
+        android:contentDescription="Player"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toTopOf="@id/playButton"
+        android:layout_marginBottom="50dp" />
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="PLAY"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        app:layout_constraintEnd_toStartOf="@id/stopButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerIcon"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp" />
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="STOP"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/playButton"
+        app:layout_constraintTop_toBottomOf="@id/playerIcon"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Готов к воспроизведению"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playButton"
+        android:layout_marginTop="50dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

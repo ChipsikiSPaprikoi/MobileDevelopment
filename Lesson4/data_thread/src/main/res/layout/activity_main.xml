@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Здесь будет лог последовательности Runnable"
+        android:maxLines="10"
+        android:lines="10"
+        android:scrollbars="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTheory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Сначала выполняется runn1 (вызван через runOnUiThread), затем runn2 (через tvInfo.post), затем runn3 (через tvInfo.postDelayed). Метод runOnUiThread(Runnable) выполняет код в UI-потоке и добавляет задачу в его очередь, если вызывается из фонового потока. Метод View.post(Runnable) также ставит Runnable в очередь UI-потока, но вызывается относительно конкретного View. Метод View.postDelayed(Runnable, long) работает как post, но с задержкой выполнения не менее указанного количества миллисекунд."
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvInfo"
+        android:textSize="14sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
