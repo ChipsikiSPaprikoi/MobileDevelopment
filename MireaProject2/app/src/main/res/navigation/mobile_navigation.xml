@@ -40,4 +40,10 @@
         android:name="ru.mirea.miheenkovts.mireaproject.WebViewFragment"
         android:label="Браузер"
         tools:layout="@layout/fragment_webview" />
+
+    <fragment
+        android:id="@+id/nav_microphone"
+        android:name="ru.mirea.miheenkovts.mireaproject.AudioRecorder"
+        android:label="Микрофон"
+        tools:layout="@layout/fragment_audio_recorder" />
 </navigation>

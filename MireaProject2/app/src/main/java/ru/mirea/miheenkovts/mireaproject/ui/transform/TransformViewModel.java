@@ -4,23 +4,36 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.File;
 
 public class TransformViewModel extends ViewModel {
 
-    private final MutableLiveData<List<String>> mTexts;
+    private final MutableLiveData<String> mStatusText;
+    private final MutableLiveData<File> mCapturedImageFile;
 
     public TransformViewModel() {
-        mTexts = new MutableLiveData<>();
-        List<String> texts = new ArrayList<>();
-        for (int i = 1; i <= 16; i++) {
-            texts.add("This is item # " + i);
-        }
-        mTexts.setValue(texts);
+        mStatusText = new MutableLiveData<>();
+        mCapturedImageFile = new MutableLiveData<>();
+
+        mStatusText.setValue("Разрешите CAMERA и нажмите Сфотографировать");
+        mCapturedImageFile.setValue(null);
     }
 
-    public LiveData<List<String>> getTexts() {
-        return mTexts;
+    public LiveData<String> getStatusText() {
+        return mStatusText;
+    }
+
+    public LiveData<File> getCapturedImageFile() {
+        return mCapturedImageFile;
+    }
+
+    public void photoTaken(File imageFile) {
+        mCapturedImageFile.setValue(imageFile);
+        mStatusText.setValue("Фото сделано, коллаж готов");
+    }
+
+    public void clearPhoto() {
+        mCapturedImageFile.setValue(null);
+        mStatusText.setValue("Разрешите CAMERA и нажмите Сфотографировать");
     }
 }

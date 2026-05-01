@@ -8,15 +8,93 @@
 
     <TextView
         android:id="@+id/text_slideshow"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Компас: Определение Севера"
         android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_direction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="#E3F2FD"
+        android:gravity="center"
+        android:minHeight="80dp"
+        android:padding="16dp"
+        android:text="Направление: ---"
+        android:textColor="#1976D2"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_slideshow" />
+
+    <TextView
+        android:id="@+id/tv_azimuth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="#F5F5F5"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Азимут: 0°"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_direction" />
+
+    <Button
+        android:id="@+id/btn_request_permissions"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="Запросить разрешения LOCATION"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_azimuth" />
+
+    <ImageView
+        android:id="@+id/iv_compass"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="32dp"
+        android:rotation="0"
+        android:src="@android:drawable/ic_menu_compass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_request_permissions" />
+
+    <TextView
+        android:id="@+id/tv_instruction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="Разрешите LOCATION и поворачивайте устройство для определения Севера"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_compass" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

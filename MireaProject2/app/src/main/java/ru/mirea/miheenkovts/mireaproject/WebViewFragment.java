@@ -28,7 +28,7 @@ public class WebViewFragment extends Fragment {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://unity.com");  // Страница по умолчанию о Unity
+        webView.loadUrl("https://google.com");  // Страница по умолчанию о Unity
     }
 
     @Override
