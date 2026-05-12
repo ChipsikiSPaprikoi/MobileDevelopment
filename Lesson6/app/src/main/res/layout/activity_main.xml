@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/etGroup"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Номер группы" />
+
+    <EditText
+        android:id="@+id/etListNumber"
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:hint="Номер по списку"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:hint="Любимый фильм/сериал" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:text="Сохранить" />
+
+</LinearLayout>
