@@ -78,9 +78,9 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.nav_settings) {
-            NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-            navController.navigate(R.id.nav_settings);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+        if (NavigationUI.onNavDestinationSelected(item, navController)) {
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

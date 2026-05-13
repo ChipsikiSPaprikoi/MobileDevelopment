@@ -7,7 +7,7 @@
         <item
             android:id="@+id/nav_transform"
             android:icon="@drawable/ic_camera_black_24dp"
-            android:title="@string/menu_transform" />
+            android:title="Коллаж" />
         <item
             android:id="@+id/nav_reflow"
             android:icon="@drawable/ic_gallery_black_24dp"
@@ -19,7 +19,11 @@
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/ic_settings_black_24dp"
-            android:title="@string/menu_settings" />
+            android:title="Профиль" />
+        <item
+            android:id="@+id/nav_network"
+            android:icon="@drawable/ic_gallery_black_24dp"
+            android:title="Сеть" />
         <item
             android:id="@+id/nav_data"
             android:icon="@android:drawable/ic_menu_info_details"

@@ -8,26 +8,32 @@
     <fragment
         android:id="@+id/nav_transform"
         android:name="ru.mirea.miheenkovts.mireaproject.ui.transform.TransformFragment"
-        android:label="@string/menu_transform"
+        android:label="Коллаж"
         tools:layout="@layout/fragment_transform" />
 
     <fragment
         android:id="@+id/nav_reflow"
         android:name="ru.mirea.miheenkovts.mireaproject.ui.reflow.ReflowFragment"
-        android:label="@string/menu_reflow"
+        android:label="Worker"
         tools:layout="@layout/fragment_reflow" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="ru.mirea.miheenkovts.mireaproject.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="Компас"
         tools:layout="@layout/fragment_slideshow" />
 
     <fragment
         android:id="@+id/nav_settings"
         android:name="ru.mirea.miheenkovts.mireaproject.ui.settings.SettingsFragment"
-        android:label="@string/menu_settings"
+        android:label="Профиль"
         tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/nav_network"
+        android:name="ru.mirea.miheenkovts.mireaproject.NetworkFragment"
+        android:label="Сеть"
+        tools:layout="@layout/fragment_network" />
 
     <fragment
         android:id="@+id/nav_data"
