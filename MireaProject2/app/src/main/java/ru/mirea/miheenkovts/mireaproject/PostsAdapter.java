@@ -29,7 +29,6 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostViewHold
     public void onBindViewHolder(@NonNull PostViewHolder holder, int position) {
         Post p = posts.get(position);
         holder.title.setText(p.getTitle());
-// краткий фрагмент body — первые 100 символов или целиком если короче
         String body = p.getBody() != null ? p.getBody() : "";
         holder.body.setText(body.length() > 100 ? body.substring(0, 100) + "..." : body);
     }
